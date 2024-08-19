@@ -1,30 +1,8 @@
-// import jwt from "jsonwebtoken";
-// import "dotenv/config.js"
-
-// const fetchUser = async (req, res, next) => {
-//     const token = req.header('auth-token');
-
-//     if (!token) {
-//         return res.status(401).json({ msg: 'No token, authorization denied' });
-//     }
-
-//     try {
-//         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-//         req.user = decoded.user;
-//         next();
-//     } catch (err) {
-//         res.status(401).json({ msg: 'Token is not valid' });
-//     }
-// };
-
-// export default fetchUser;
-
-
 import "dotenv/config";
 import jwt from "jsonwebtoken";
 
 const fetchUser = (req,res,next)=>{
-    const token = req.header('auth-token');
+    const token = req.header('auth-token')?.replace('Bearer ', '');
 
     if(!token){
         res.status(401).sned({error : "Please authenticate using a valid token"});
@@ -45,3 +23,4 @@ const fetchUser = (req,res,next)=>{
 }
 
 export default fetchUser;
+

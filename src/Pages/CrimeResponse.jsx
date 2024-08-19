@@ -208,7 +208,7 @@ const CrimeResponse = () => {
                                     <option value="BOMB BLAST">BOMB BLAST</option>
                                     <option value="HIGH WAY ROBBERY">HIGH WAY ROBBERY</option>
                                     <option value="BANK ROBBERY">BANK ROBBERY</option>
-                                    <option value="CAR SNATCHING">CAR SNATCHING</option>
+                                    <option value="CAR SNATCHING">SNATCHING</option>
                                     <option value="GANG RAPE">GANG RAPE</option>
                                 </select>
                             </div>
